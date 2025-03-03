@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="utf-8" />
+<title>DSRedesign-Part2</title>
+<!-- In lab #4 we left out styling because we were focusing only on the page structure. For this
+lab we’ll add a link to an external stylesheet: “DSRedesign.css” -->
+
+<!-- Additional metadata code goes here -->
+<meta name="description" content="The Center for Disability and Access is dedicated to fostering 
+an inclusive environment by providing comprehensive support services to students, faculty, and alumni." />
+<meta name="keywords" content="accessibility, disability, ADA, accommodations, student,
+faculty, inclusive, support" />
+<link href="DSRedesign.css" rel="stylesheet" type="text/css" media="screen" /> 
+<!-- this points
+to our external style sheet. This css file is what positions and styles the structure and content in
+this html file -->
+<!--note: if you wanted to put your style sheet in a subdirectory called “css” for example, the
+above code would need to point to that subdirectory as follows: “<link
+href=”css\DSRedesign.css” .... -->
+<!--enable HTML5 elements in IE7+IE8 -->
+<!-- [if lt IE 9]>
+<script src="http://html5shim.googlecode.com/svn/trunk/htl5.js"></script>
+<![endif]-->
+<!-- - - - - - - - - - - - - -->
+</head>
+<!-- The heart of the code for you site - the stuff that appears in the -->
+<!-- browser will go in the body section -->
+<body>
+<!--Before html5 we would have divided the sections of the page up using "divs" -->
+
+<!--However we’ll use the new semantic elements provided with html5 such as -->
+<!-- "nav”, “banner”, “main”, etc., instead -->
+<!--we’ll use only one div – “wrapper” as a container for the whole page -->
+<div id="wrapper">
+<header role="banner">
+<!-- you should be able to find the banner image - DS_dkgray-banner1.jpg – in the resources
+area of the course site. Note that the file will need to be put in a subdirectory called “images”. -->
+<img src="images/DS_dkgray-banner1.jpg" alt="DS Redesign logo" />
+<!-- Enter the text what will go in your top banner -->
+</header>
+<p>University of Colorado Boulder</p>
+
+<nav role="navigation">
+<ul> <!-- navigation is usually coded as an unordered list -->
+<!--DO NOT simply enter “menu item 1”, etc. Enter the text for the menu items you plan to
+include on your redesigned page!! -->
+<li><a href="#">Home</a></li>
+<li><a href="#">About Us</a></li>
+<li><a href="#">Accommodations</a></li>
+<li><a href="#">Resources</a></li>
+<li><a href="#">Contact Us</a></li>
+</ul>
+
+</nav>
+<div role="search">
+
+<form action="search.php" method="post" id="searchinput" role="search">
+<label for="search">Search:</label>
+<input id="search" type="text" name="searchfield" />
+<input type="submit" value="Submit" />
+</form>
+</div> <!-- end search div -->
+<main role="main">
+<!-- enter the text or a summary of the text that will go in the main content -->
+
+<h1>Center For Disability and Access</h1>
+
+<p>The Center for Disability and Access is dedicated to fostering an inclusive environment by 
+providing comprehensive support services that ensure accommodations, accessibility, and equitable 
+access for students, staff, faculty, and visitors throughout the CU community.</p>
+
+</main>
+
+<!-- in html5 you can have more than one set of menus. Here we’ll mark up the quicklinks menu
+as navigation. Note, you may decide you do not want a quick links section on your redesigned
+DS site. In that case, you would obviously not include this segment. -->
+
+<nav role=”navigation” class="quicklinks">
+<h2>Quick Links</h2>
+<ul>
+<li><a href="/">Student Accommodations</a></li>
+<li><a href="/">Workplace Accommodations</a></li>
+<li><a href="/">Student Testing Center</a></li>
+<li><a href="/">ADA Coordinator Office</a></li>
+<li><a href="/">Access+</a></li>
+</ul>
+</nav>
+<footer role="contentinfo">
+<h2>Contact Information</h2>
+<img src="images/footerimageTBA.png" alt="Footer image TBA" />
+<p>Center for Community, N200</p>
+<p>107 UCB</p>
+<p>Boulder, CO 80309</p>
+<p>(303)-492-8671</p>
+</footer>
+</div> <!-- end of wrapper div -->
+</body>
+</html>
+<!-- end of html file -->
